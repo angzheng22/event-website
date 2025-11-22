@@ -1,0 +1,564 @@
+/*** VSCodeEDU preview fix 
+
+  Purpose:
+  - Fix VSCodeEDU issue that causes a white border to show around
+    the preview window
+
+  When To Modify:
+  - If you change the background color of your webpage, you may need to update this rule too.
+***/
+html {
+  background-color: var(--bg-color);
+  scroll-padding-top: 65px; 
+}
+
+/*** body ***
+  
+  Purpose:
+  - Add style rules for the body of your webpage
+  - This is useful if you want a rule to apply to EVERYTHING on your page
+    - (Tip: You can always override these rules later in the stylesheet)
+
+  When To Modify:
+  - [ ] Project 3 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+body {
+  /* Add a background color or image */
+  background-color: var(--bg-color); /* see bottom of file for color variables */
+
+  /* Customize the default size, color, and font for text*/
+  font-size: 16px;
+  color: #f8f8ff;
+  font-family: Lato, sans-serif; /* This tells the browser: "Try to use `Tahoma`, and if you can't find it, use any sans-serif font." */
+
+  /* Put space around the edges of the webpage */
+  margin: 0;
+  padding: 15px;
+}
+
+/*** Text ***
+  
+  Purpose: 
+  - Add style rules for headings (h1-6),
+    paragraphs (p), links (a), and buttons
+
+  When To Modify:
+  - [X] Project 3 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+h1 {
+  display: inline-block;
+  text-align: center;
+  font-size: 40px;
+  background-color: #efd647;
+  color:#191970;
+  padding: 15px 15px;
+  border-radius: 15px;
+  margin-bottom: 3px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 21px;
+  border-bottom: 3px solid #efd647;
+  padding-bottom: 5px;
+  color: #f8f8ff;
+}
+
+h3 {
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+h4 {
+  margin-bottom: 6px;
+  margin-top: 7px;
+}
+
+p {
+  margin-top: 5px;
+  line-height: 1.6;
+}
+
+a {
+  text-align: left;
+  text-decoration: none; /* remove underline on link */
+}
+
+button {
+  /* Example Style, replace with your own! */
+  background-color: #efd647;    /* button color */
+  color: #191970;               /* text color */
+  padding: 8px 8px;          /* space between button's text and edge */
+  border-radius: 7px;         /* curved edges instead of square */
+  border: none;
+  cursor: pointer;            /* makes the cursor change when over button */
+  font-family: Lato, sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+button:hover {
+  /* Make the button look different when the user hovers over it */
+  box-shadow: 0 0 12px #efd647, 0 0 20px #efd647; /* glowing yellow */
+}
+
+article h3 {
+  font-size: 17px;
+}
+
+/*** header ***
+  
+  Purpose:
+  - Add style rules for your website's header section
+
+  When To Modify:
+  - [X] Project 3 (REQUIRED FEATURE) 
+  - [ ] Project 4 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+.header-container { /* Example A: This styles elements with class="header" */
+  padding-top: 3px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: flex-start;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  clear: both;
+}
+
+.header-button {
+  background-color: none;
+  color: #191970;
+  text-align: center;
+  font-size: 10px;
+  cursor: pointer;
+  padding-top: 20px;
+  margin-top: 2px;
+  display: flex;
+  gap: 15px; /* adds space between flex items */
+}
+
+.header-item {
+  text-align: left;
+}
+
+.header-item:nth-of-type(1) { /* Street Eats After Dark */
+  width: 40%;
+}
+
+.header-item:nth-of-type(2) { /* Global bites, local nights. */
+  font-size: 23px;
+  width: 60%;
+  line-height: 20px;
+  color: #efd647;
+}
+
+#header-img {
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 10px;
+  width: 30%;
+  max-width: 70%;
+}
+
+/*** footer ***
+  
+  Purpose:
+  - Add style rules for your website's footer section
+
+  When To Modify:
+  - [ ] Project 3 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+.footer { /* Example B: This styles elements with class="footer" */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #927bd7; /* #efd647; */
+  color: #f8f8ff;
+  padding: 4px 5px;
+  font-size: 14px;
+}
+
+.footer a:link {
+  color: #f8f8ff;
+}
+
+.footer a:visited {
+  color: #191970;
+}
+
+.footer a:hover {
+  color: #efd647;
+}
+
+.footer a:active {
+  /* Dictates appearance of a link when it is being clicked (mouse is pressed down) */
+  opacity: 0.7;
+}
+
+/*** Navigation bar (navbar) ***
+  
+  Purpose:
+  - Add style rules for your website's navbar
+
+  When To Modify:
+  - [ ] Project 4 (REQUIRED FEATURE) 
+  - [ ] Any time after
+***/
+
+.navbar ul {
+  z-index: 1000; /* Ensures the navbar is on top of other elements */
+  list-style-type: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #efd647;
+  font-weight: bold;
+  margin: 0;
+}
+
+.navbar ul li {
+  float: left; /* moves each <li> to the left side of its container (<ul>), so the list items appear side by side horizontally instead of stacked vertically */
+  margin: 8px;
+}
+
+.navbar ul li a {
+  display: block; /* Makes the entire button clickable */
+  text-decoration: none; 
+  color: #191970;
+  text-align: left;
+  padding: 3px 4px;
+}
+
+.navbar ul li a:hover {
+  color: #fe5801;
+}
+
+
+/*** About Section ***
+  
+  Purpose:
+  - Add style rules for your website's About section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+.bullets ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 3;
+  line-height: 1.8;
+}
+
+.bullets ul li::before{ /* Formatting before every list item */
+  content: "✦";
+  display: inline-block; 
+  margin-left: -1em; /* align star with left edge */
+}
+
+/*** Schedule Section ***
+  
+  Purpose:
+  - Add style rules for your website's Schedule section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+.events-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;          /* keeps all items on one line */
+  overflow-x: auto;           /* allows horizontal scrolling when page is small */
+  overflow-y: hidden;        /* hides any vertical overflow */
+}
+
+.events-item {
+  color: #191970; /* #3f3fbf */
+  background-color: #efd647;
+  margin: 5px 10px;
+  padding: 10px 10px;
+  border-radius: 15px;
+  width: 300px;
+  min-width: 200px;
+  max-width: 320px;
+  flex: 1 1 0; /* grow=1, shrink=1, base width=0 */
+}
+
+.events-img {
+  border-radius: 15px;
+  overflow: hidden; /* hides parts of the image that go beyond rounded corners */
+  display: flex;
+  justify-content: center;
+}
+
+/*** Links Section ***
+  
+  Purpose:
+  - Add style rules for your website's Links section
+
+  When To Modify:
+  - [ ] Project 3 (OPTIONAL)
+  - [ ] Project 4 (STRETCH FEATURE) 
+  - [ ] Any time after
+***/
+
+a:link {
+  /* Dictates appearance of an unvisited link */
+  color: #00CED1;
+}
+
+a:visited {
+  color: #927bd7;
+}
+
+a:hover {
+  color: #fe5801;
+}
+
+a:active {
+  /* Dictates appearance of a link when it is being clicked (mouse is pressed down) */
+  opacity: 0.7;
+}
+
+/*** RSVP Section ***
+  
+  Purpose:
+  - Add style rules for your website's RSVP form
+
+  When To Modify:
+  - [ ] Project 6 (REQUIRED FEATURE)
+  - [ ] Project 7 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+.form-container {
+  display: flex;
+  align-items: center; /* centers items vertically */
+  gap: 5px;
+}
+
+.rsvp-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+/* Add other rsvp-related selectors here */
+
+.rsvp-para {
+  width: 55%;
+  padding-right: 10px;
+}
+
+.rsvp-participants {
+  width: 45%;
+  padding-right: 10px;
+}
+
+#rsvp-form input{
+  margin-right: 10px;
+}
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  /* Set border-color and background */
+  border-color: red;
+  background-color: rgb(233, 167, 167);
+}
+
+/*** Animations [PLACEHOLDER] [ADDED IN UNIT 8] ***/
+
+/*** Success Modal  ***
+  
+  Purpose:
+  - Add style rules to your website's pop-up modal, which appears
+    when a user successfully submits the RSVP form
+
+  When To Modify:
+  - [ ] Project 9 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+.modal {
+  display: none;   /* modal should be hidden by default*/
+  position: fixed; /* modal cannot move around the screen */
+  z-index: 2;      /* modal appears above other elements */ 
+  
+  /* TODO: Make the modal fill the entire screen */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Add a semi-transparent background to shadow non-modal elements*/
+  background-color: rgba(0,0,0,0.4); /* 40% opacity black */
+
+  /* Flexbox settings for modal */
+  /* These won't apply until we update "display:" from "hidden" to "flex" in our JS */
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-container {
+  position: relative; /* establishes positioning context */
+  /* Change modal size and spacing here */
+  padding: 50px;
+  width: 55%;
+
+  /* Customize modal style here */
+  background-color: #191970;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Lato, sans-serif;
+  border-radius: 30px;
+
+  /* Optional: Use flexbox to customize .modal-item layout */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#modal-exit {
+  position: absolute; /* can place button anywhere inside the modal-container */
+  top: 20px; /* distance from top edge of modal-container */
+  right: 20px;  /* distance from right edge of modal-container */
+  padding: 3px 5px;
+}
+
+/* Default light mode style */
+.light-mode {
+  background-color: rgb(49, 159, 228);
+  color: #191970;
+}
+
+/* Example: Different light mode style for h3 */
+.light-mode h3 {
+  color: #191970;
+}
+
+.light-mode h2 {
+  color: #191970;
+  border-bottom: 3px solid white;
+}
+
+.light-mode article p,
+.light-mode article h3 {
+  color: #fe5801;
+}
+
+.light-mode h1,
+.light-mode button,
+.light-mode .events-item,
+.light-mode .navbar ul {
+  background-color: white;
+}
+/* Example: Different light mode style for visited links */
+.light-mode a:visited * { /* The * at the end makes sure the following applies to all elements inside <a></a> tags */
+  color: lightskyblue;
+}
+
+.light-mode a:hover * {
+  color: #efd647;
+}
+
+.light-mode .header-button button:hover {
+  /* Hover animation */
+  animation: float 1s ease-in-out infinite;
+  background: #f0f8ff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* 🎞️ Keyframes for up-and-down motion */
+@keyframes float {
+  0%, 100% { /* 0% and 100% set position of button at start and end of movement */
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-3px); /* Move up */
+  }  
+  75% {
+    transform: translateY(3px); /* Move down */
+  }
+  50% { /* sets the position of button halfway thru movement */
+    transform: translateY(0); 
+  }
+}
+
+/* Add style to button */
+#theme-button {
+  background-color: #fe5801;
+  color: white;
+  font-size: 13px;
+}
+
+#theme-button:hover,
+#motion-button:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.light-mode #theme-button:hover,
+.light-mode #motion-button:hover,
+.light-mode #rsvp-button:hover {
+  color: #efd647;
+}
+
+/* Add style to Reduce Motion button */
+#motion-button {
+  background-color: #fe5801;
+  color: white;
+  font-size: 13px;
+}
+
+/*** Custom Colors (OPTIONAL) ***
+  
+  Purpose:
+  - Use CSS variables to define custom colors for your website
+  - To get you started, we've provided the color scheme used in our example site.
+  - To reference a color variable in your css, use var(--variable-name) in place of a color value
+
+  When To Modify:
+  - [ ] Any time (OPTIONAL)
+***/
+
+:root {
+    /* Light Mode */
+    --bg-color: #191970;
+    --text-color: #f8f8ff;
+    --accent-color: #efd647;
+
+    /* Dark Mode */
+    --bg-color-dark-mode: #3e3377;
+    --text-color-dark-mode: #fff;
+
+    /* Accent Colors */
+    --accent-color-light: #d2cff5;
+    --accent-color-medium: #684fb5;
+    --accent-color-dark: #482f95;
+    --accent-color-darkest: #231942;
+    --accent-color-green: #28eb76;
+
+    /* Error Colors */
+    --error-color: #de4428; /* orange red, similar to lantern logo color */
+    --error-color-border: #e63946;
+}

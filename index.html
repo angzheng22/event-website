@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- head
+
+        Purpose:
+        - Title used here shows up in the browser tab
+        - Link to the favicon (small image that appears in the browser tab)
+        - Link to the CSS file (used to style the webpage)
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 2 (STRETCH FEATURE) (favicon)
+        - [ ] Any time after
+        -->
+        <title>Street Eats After Dark</title>
+        <link rel="icon" href="/img/red lantern night.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+    
+        <!-- navbar
+
+        Purpose:
+        - Navigation bar that allows users to jump to different sections of the webpage
+        - Also holds buttons for user settings (dark mode, reduce motion)
+
+        When To Modify:
+        - [ ] Project 4 (REQUIRED FEATURE)
+        - [ ] Project 5 (REQUIRED FEATURE) 
+        - [ ] Project 8 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        -->
+        <div class="navbar">
+            <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#attractions">Market Attractions</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><button id="theme-button">Toggle Light Mode</button></li>
+            <li><button id="motion-button">Reduce Motion OFF</button></li>
+            </ul>
+        </div>
+
+        <!-- headings
+
+        Purpose:
+        - Main header section of the webpage
+        - Contains the title, subtitle, image, and key buttons for the webpage
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 3 (REQUIRED FEATURE) 
+        - [ ] Project 4 (REQUIRED FEATURE) 
+        - [ ] Any time after
+        -->
+        <div class="header-container" id="home">
+            <div id="header-img">
+                <img id="header-logo" alt="Logo for the website" src="/img/red lantern night transparent.png" width=150></img>
+            </div>
+            <div class="header-item">
+                <h1>Street Eats After Dark</h1>
+                <h3>Global bites, local nights.</h3>
+            </div>
+            <div class="header-button">
+                <button type="button">Featured Foods</button>
+                <button type="button">Share This Event</button>
+            </div>
+        </div>
+        
+        <!-- about
+
+        Purpose:
+        - Section for general info about the event
+        - Contains a video, description, and key points about the event
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <h2 id="about">About the Event</h2>
+        <iframe width="350" height="200" src="https://www.youtube.com/embed/JD3O_cVevkc?si=ypHCb7a1TcVP64gs" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <p> This night market features vendors selling 
+            street foods from around the world. Come grab
+            a bite of new flavors or a taste of home away
+            from home. We welcome everyone to enjoy some
+            good food and fun night vibes. There will also
+            be live music and stalls selling trinkets and
+            handmade gifts by local businesses.</p>
+
+        <div class="bullets">   
+            <h3>What to Expect</h3>
+            <h4>Flavors, Lights, and Good Vibes</h4>
+            <ul>
+                <li> <b>New Flavors to Savor:</b> <i>Exciting street food, unique snacks, and sweet treats you won’t find anywhere else.</i></li>
+                <li> <b>Lively Atmosphere:</b> <i>Buzzing crowds, glowing lights, and music that bring the night market to life.</i></li>
+                <li> <b>Unexpected Finds:</b> <i>Handmade crafts, local goods, and little delights to discover around every corner.</i></li>
+            </ul>
+        </div> 
+
+        <!-- schedule
+
+        Purpose:
+        - Section for specific info about the event's schedule
+        - Contains images and descriptions of each activity
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        
+        <h2 id="attractions">Market Attractions</h2>
+        <div class="events-container">
+            <div class="events-item">
+                <div class="events-img">
+                    <img alt="An image depicting a skewer stall at a night market" src="./img/food stall.jpg" width="300" height="150px"/>
+                </div>
+                <h3>Street Food Stalls</h3>
+                <p>Food stalls will be selling global eats from Asia,
+                    South America, and Europe such as Chinese
+                    burgers, samosas, arepas, and würstel.</p>
+            </div>   
+            <div class="events-item">
+                <div class="events-img">
+                    <img alt="An image showing stage with live music and performances" src="./img/live music stage.jpg" width="300" height="150px"/>
+                </div>
+                <h3>Live Music & Performances</h3>
+                <p>Some seating will be available near the stage where
+                    live music and performances. Enjoy the show while eating!</p>
+            </div> 
+            <div class="events-item">
+                <div class="events-img">
+                    <img alt="An image of a stall selling trinkets" src="./img/jewelry stall.webp" width="300" height="150px"/>
+                </div>
+                <h3>Trinkets & Handmade Gifts by Local Shops</h3>
+                <p>Pick up a nice trinket or gift for someone or treat yourself
+                    and show support for local businesses.</p>
+            </div>
+        </div>
+
+<!-- rsvp
+
+Purpose:
+- Section for users to sign up for the event
+- Contains a form for users to input their information, 
+and a list of other users who have signed up
+
+When To Modify:
+- [ ] Project 6 (REQUIRED FEATURE) 
+- [ ] Project 6 (STRETCH FEATURE) 
+- [ ] Any time after
+--> 
+<div id="rsvp">
+    <h2>RSVP</h2>
+    <div class="rsvp-container">
+        <div class="rsvp-para">
+            <p>Don't miss out on a fun night filled with food and discovery!
+                Complete the form below to let us know you will be 
+                joining us and to receive more info and reminders about the 
+                event.</p>
+        </div>
+        <div class="rsvp-participants">
+            <p>🌟 Angie from Nebraska has RSVP'd.</p>
+            <p>🌟 Ryan from New York has RSVP'd.</p>
+            <p>🌟 Teresa from Washington has RSVP'd.</p>
+            <p id="rsvp-count">🌙 3 people have RSVP'd to this event!</p>
+        </div>
+    </div>
+
+    <!--- Sign RSVP Form --->
+    <div class="form-container">
+        <form id="rsvp-form" title="rsvp-form">
+            <label for="name">Name:</label>
+            <input id="name" type="text">
+            <label for="state">Home State:</label>
+            <input id="state" type="text">
+            <label for="email">Email:</label>
+            <input id="email" type="text">
+
+            <!-- Submit button -->
+            <button id="rsvp-button" type="submit">Submit RSVP</button>
+        </form>
+    </div>      
+</div>
+
+
+        <!-- success modal
+
+        Purpose:
+        - Modal that appears when a user successfully signs up for the event
+        - Contains a personalized message and image
+
+        When To Modify:
+        - [ ] Project 9 (REQUIRED FEATURE)
+        - [ ] Project 9 (STRETCH FEATURE) 
+        - [ ] Any time after
+        --> 
+
+        <div id="success-modal" class="modal">
+            <div class="modal-container">
+                <div class="modal-item">
+                    <p id="modal-text">Your RSVP has been successfully sent!</p>
+                    <button id="modal-exit">x</button>
+                </div>
+                <div class="modal-item">
+                    <img id="modal-img" alt="An image of a skewer with meat and veggies" src="./img/skewer.png" width="300">
+                </div>
+            </div>
+        </div>
+
+        <!-- links
+
+        Purpose:
+        - Links to other resources related to the event
+
+        When To Modify:
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+        <h2 id="links">Links</h2>
+
+        <!-- This <a> block is one link.  Copy and paste all 6 lines to create another link. -->
+        <a class="block" target="_blank" rel="noopener noreferrer" href="https://ecaarnightmarket.square.site/what-is-a-night-market">
+            <article>
+                <h3>What is a Night Market?</h3>
+                <p>Read about what a night market, its purpose, and its history</p>
+            </article>
+        </a>
+
+        <a class="block" target="_blank" rel="noopener noreferrer" href="https://medium.com/@mubarakhalid61/the-unique-traditions-of-night-markets-across-the-world-5f04e720c472">
+            <article>
+                <h3>Night Markets Around the World</h3>
+                <p>Read about night market traditions around the world and how they differ</p>
+            </article>
+        </a>
+
+        <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
+        <div class="footer">
+            <a href="https://www.google.com/search?q=night+market&rlz=1C1RXQR_enUS1151US1152&oq=night+market&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIOCAEQRRgnGDsYgAQYigUyBggCEEUYOzIGCAMQRRg7MgoIBBAAGJIDGIAEMgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEINTUwOWowajeoAgCwAgA&sourceid=chrome&ie=UTF-8&zx=1759861715296&no_sw_cr=1" target="_blank">Learn More</a> /
+            <a href="https://mail.google.com" target="_blank">Email Us</a>
+        </div>
+        
+        <!-- script [PLACEHOLDER] [ADDED IN UNIT 5] -->
+        <script src="index.js"></script>
+    </body>
+</html>
